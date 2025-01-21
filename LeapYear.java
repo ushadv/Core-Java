@@ -2,31 +2,34 @@
 
 package full_stack_java;
 import java.util.Scanner;
-public class LeapYear {
+public class LeapYear
+{
 	public static void main(String args[])
 	{
-		Scanner s=new Scanner(System.in);
-		
-		//user through input
-		System.out.println("***Enter Any Number***");
-		int i=s.nextInt();
-		
-		//checking the condition 
-		if(i%2==0)
+
+
+		Scanner scanner = new Scanner(System.in);
+
+		// Input year
+		System.out.print("Enter a year: ");
+		int year = scanner.nextInt();
+
+		// Check if the year is a leap year
+		if ((year % 4 == 0 && year % 100 != 0) || (year % 400 == 0))
 		{
-			//if condition becomes true then it will execute this statement
-			System.out.println("--Entered Number is a Leap year--");
-		}
+			System.out.println(year + " is a leap year.");
+		} 
 		else
 		{
-			////if condition is false then it will execute this statement
-			System.out.println("--Entered number is not leap year--");
+			System.out.println(year + " is not a leap year.");
 		}
 
+		scanner.close();
 	}
 }
 
+
 //Output
-/* ***Enter Any Number***
-2024
---Entered Number is a Leap year-- */
+/* Enter a year: 1990
+1990 is not a leap year.
+ */
